@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Fission Labs Assessment</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="module.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container" ng-app="fissionLabs">
+        <div class="row">
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4">
+                <i>
+                    <b>FissionLabs Assessment</b>
+                </i>
+
+                <br>
+                <br>
+                <div class="row" ng-controller="appController">
+                    Upload Sheet:
+                    <input name="fileUpload" type="file" file-reader='data' accept=".csv" />
+                    <!-- <p>{{data}}</p> -->
+                    <br>
+                    <br>
+                    <button ng-click="submit(data)" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="chartView"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
